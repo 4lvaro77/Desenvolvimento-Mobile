@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#F5F5F5">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Logo -->
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:src="@drawable/logo_restaurante"
+            android:scaleType="centerCrop"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Título -->
+        <TextView
+            style="@style/EstiloTexto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="FAÇA SEU PEDIDO!"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:gravity="center" />
+
+        <!-- Nome do Cliente -->
+        <EditText
+            android:id="@+id/nome_cliente"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="Nome do cliente"
+            android:inputType="textPersonName" />
+
+        <!-- Quantidade -->
+        <TextView
+            style="@style/EstiloTexto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="QUANTIDADE"
+            android:layout_marginTop="16dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/subtrair"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:text="-"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/quantidade"
+                android:layout_width="80dp"
+                android:layout_height="60dp"
+                android:text="0"
+                android:textSize="24sp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp" />
+
+            <Button
+                android:id="@+id/adicionar"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:text="+"
+                android:textSize="24sp" />
+        </LinearLayout>
+
+        <!-- Adicionais -->
+        <TextView
+            style="@style/EstiloTexto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ADICIONAIS"
+            android:layout_marginTop="16dp" />
+
+        <CheckBox
+            android:id="@+id/bacon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Bacon (+ R$ 2,00)" />
+
+        <CheckBox
+            android:id="@+id/queijo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Queijo (+ R$ 2,00)" />
+
+        <CheckBox
+            android:id="@+id/onion_rings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Onion Rings (+ R$ 3,00)" />
+
+        <!-- Resumo do Pedido -->
+        <TextView
+            style="@style/EstiloTexto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="RESUMO DO PEDIDO"
+            android:layout_marginTop="16dp" />
+
+        <TextView
+            android:id="@+id/resumo_pedido"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:padding="8dp"
+            android:background="#E0E0E0"
+            android:text="Nenhum pedido realizado"
+            android:textSize="14sp" />
+
+        <!-- Valor Total -->
+        <TextView
+            android:id="@+id/valor_total"
+            style="@style/EstiloTexto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="VALOR TOTAL: R$ 0,00"
+            android:textStyle="bold"
+            android:textSize="18sp" />
+
+        <!-- Botão Enviar -->
+        <Button
+            android:id="@+id/enviar_pedido"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="ENVIAR PEDIDO"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:backgroundTint="#2196F3"
+            android:textColor="@android:color/white" />
+
+    </LinearLayout>
+</ScrollView>
